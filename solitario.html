@@ -5,11 +5,14 @@
 <head>
   <title>Solitario VIU</title>
   <meta charset="utf-8">
+  <link rel="shortcut icon" href="imagenes/baraja/10-viu.png"> <!-- ícono de pestaña del navegador -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/solitario.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script defer src="./js/solitario.js"></script>
+  <!-- CSS SweetAlert -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
   <!--/*** !!!!!!!!!!!!!!!!!!! CODIGO !!!!!!!!!!!!!!!!!!!! **/
 		Invocar a los ficheros de estilos y al JavaScript donde proceda
         -->
@@ -22,7 +25,9 @@
     <!--/*** !!!!!!!!!!!!!!!!!!! CODIGO !!!!!!!!!!!!!!!!!!!! **/
     Rellenar h1 e insertar el logo donde proceda
         -->
-    <h1 id="titulo"></h1>
+    <h1 id="titulo">
+      Juego Solitario <img src="imagenes/logoVIU.png" width="160px" alt="logo VIU">
+    </h1>
 
     <!-- Siguiente línea donde se indicará el tiempo transcurrido y la cantidad
       de movimientos que se han hecho hasta el momento. Estos números se 
@@ -58,6 +63,8 @@
     </div>
   </div>
   </div>
+  <!-- JavaScript SweetAlert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

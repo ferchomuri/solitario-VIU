@@ -10,9 +10,18 @@
    derecha (position absolute) de los respectivos tapetes (position relative).
 */
 .contador {
-	/* position: absolute;
-	bottom: 0px;
-	right: 3px; */
+	position: absolute;
+	background-color: black;
+	color: white;
+	font-size: 11px;
+	line-height: 10px;
+	padding: 5px;
+	margin: 3px;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+	top: 0px;
+	right: 0px;
 }
 
 
@@ -20,17 +29,21 @@
 h1#titulo {
 	text-align: center;
 	color: #E65014;
+	margin: 0px;
 }
 
 /* Centrado de los marcadores de tiempo y movimientos */
 h2#marcadores {
 	text-align: center;
+	margin: 0px;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 /* Mesa que contiene a los tapetes centrados */
 div#mesa {
 	text-align: center;
-	margin: 20px;
+	margin: 10px;
 }
 
 /* Todos los tapetes con position relative para que
@@ -39,8 +52,10 @@ div#mesa {
 div.tapete {
 	display: inline-block;
 	position: relative;
-	margin: 10px;
+	margin: 5px;
+	border-radius: 5px;
 }
+
 
 /* Dimensiones y color de fondo para el tapete inicial */
 div.tapete#inicial {
@@ -50,8 +65,8 @@ div.tapete#inicial {
 }
 
 /* Dimensiones para todos los tapetes salvo el inicial */
-div.tapete:not(#inicial) {
-	height: 125px;
+.tapete:not(#inicial) {
+	height: 120px;
 	width: 100px;
 }
 
@@ -65,23 +80,55 @@ div.tapete.receptor {
 	background-color: lightgreen;
 }
 
+/* Tamaño de las cartas*/
 .carta {
 	width: 45px;
 	height: 60px;
 	position: absolute;
 }
 
-/* .carta :nth-child(1) {
-	top: 0;
-	left: 0;
-} */
-
-/* .carta:nth-child(2) {
-	top: 25px;
-	left: 25px;
+/* Puntero y animación de una carta que es arrastrable*/
+.carta[draggable='true']:hover{
+	cursor: pointer;
+	transform: scale(1.2);
 }
 
-.carta:nth-child(3) {
-	top: 50px;
-	left: 50px;
-} */
+
+/* Sombra de tapete cuando se hace un mal movimiento*/
+@keyframes movimientoError {
+	0% {
+		box-shadow: 0px 0px 1px 0px red;
+	}
+
+	25% {
+		box-shadow: 0px 0px 10px 0px red;
+	}
+
+	80% {
+		box-shadow: 0px 0px 10px 0px red;
+	}
+	
+	100% {
+		box-shadow: none;
+	}
+}
+
+
+/* Sombra de tapete cuando se hace un movimiento correcto*/
+@keyframes movimientoCorrecto {
+	0% {
+		box-shadow: 0px 0px 1px 0px green;
+	}
+
+	25% {
+		box-shadow: 0px 0px 10px 0px green;
+	}
+
+	80% {
+		box-shadow: 0px 0px 10px 0px green;
+	}
+	
+	100% {
+		box-shadow: none;
+	}
+}
