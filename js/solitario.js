@@ -266,7 +266,7 @@ function validarMovimiento(cartaSeleccionada, mazo, tapeteCarta, tapeteNuevo) {
    el tapete de donde se va a remover la carta y el nuevo tapete donde se agregará la carta*/
 function moverCarta(cartaSeleccionada, mazo, tapeteCarta, tapeteNuevo){
   let splitCartaSeleccionada = cartaSeleccionada.split("-"); //obtenemos el número y palo de la carta
-  removerCarta(cartaSeleccionada, mazo, tapeteCarta); //se remueve la carta del tapete anterior
+  removerCarta(cartaSeleccionada, tapeteCarta); //se remueve la carta del tapete anterior
   let carta = document.createElement("img");  //creación de la nueva carta con los mismos elementos de la carta seleccionada
   carta.id = cartaSeleccionada;
   carta.src = `./imagenes/baraja/${cartaSeleccionada}.png`;
